@@ -23,6 +23,7 @@ document.querySelector("#contact").addEventListener("click", function () {
 
 // When someone uses the browser back/forward buttons
 window.onpopstate = function (event) {
+  console.log(event.state.page);
   if (event.state.page == "home") renderHome()
   if (event.state.page == "about") renderAbout()
   if (event.state.page == "contact") renderContact()
